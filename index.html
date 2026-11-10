@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>KRMU PlaceIQ</title>
+  <meta name="description" content="PlaceIQ: placement management system for K.R. Mangalam University. Official placement figures, campus drives, student readiness and an adaptive aptitude round.">
+  <meta name="theme-color" content="#6D28D9">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <!-- Order matters: later files build on earlier ones. -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div class="brand">
+        <svg width="32" height="32" viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="7" fill="var(--accent)"/><rect x="7" y="16" width="4" height="7" rx="1" fill="var(--accent-ink)"/><rect x="13" y="11" width="4" height="12" rx="1" fill="var(--accent-ink)"/><rect x="19" y="6" width="4" height="17" rx="1" fill="var(--accent-soft)"/></svg>
+        <b>Place<i>IQ</i></b>
+        <span>Placement cell · K.R. Mangalam University, Gurugram</span>
+      </div>
+      <nav class="tabs" aria-label="Sections">
+        <a href="#dashboard" data-tab="dashboard">Dashboard</a>
+        <a href="#drives" data-tab="drives">Drives</a>
+        <a href="#students" data-tab="students">Students</a>
+        <a href="#portal" data-tab="portal">Student portal</a>
+        <a href="#practice" data-tab="practice">Aptitude round</a>
+      </nav>
+    </header>
+
+    <div id="banner"></div>
+    <main id="view"></main>
+
+    <footer>
+      <div><b>Where the numbers come from.</b> The official figures on the dashboard are copied from KRMU's placement records page and the Career Development Cell annual reports. Students, drives and offers are generated sample data until you import your own on the Students tab.</div>
+      <ul>
+        <li><a href="https://www.krmangalam.edu.in/placements/records" target="_blank" rel="noopener">KRMU placement records</a></li>
+        <li><a href="https://krmangalam.edu.in/pdfs/placements/cdc-annual-report-2024-25.pdf" target="_blank" rel="noopener">CDC annual report 2024–25</a></li>
+        <li><a href="https://krmangalam.edu.in/pdfs/placements/cdc-annual-report-2025%E2%80%9326.pdf" target="_blank" rel="noopener">CDC annual report 2025–26</a></li>
+      </ul>
+    </footer>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <noscript><p style="padding:16px">PlaceIQ needs JavaScript to run.</p></noscript>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

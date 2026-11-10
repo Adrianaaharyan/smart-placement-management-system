@@ -1,0 +1,24 @@
+/* Design tokens: colour and type. Light values on :root, dark values for the OS setting and for [data-theme="dark"]. */
+/* Palette: white surfaces on a faint lavender page, deep violet accent, violet-tinted ink. Green, amber and red are kept only for status (placed, warning, problem). */
+:root{
+  --bg:#F8F6FE; --surface:#FFFFFF; --surface2:#F1EDFB; --ink:#1E1633; --muted:#645B80; --line:#E2DBF3;
+  --accent:#6D28D9; --accent-ink:#FFFFFF; --accent-soft:#EDE7FB; --mark:#8B5CF6; --mark-soft:#F1EAFE;
+  --good:#12785A; --good-soft:#D9F1E8; --warn:#964E04; --warn-soft:#FBE8D0; --bad:#B8362A; --bad-soft:#F9DEDA;
+  --f-display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#130F22; --surface:#1C1631; --surface2:#261E42; --ink:#F1ECFB; --muted:#A99FC7; --line:#352C58;
+    --accent:#A78BFA; --accent-ink:#130F22; --accent-soft:#2E2358; --mark:#C4B5FD; --mark-soft:#2B2150;
+    --good:#43CC9C; --good-soft:#123A30; --warn:#F2A455; --warn-soft:#3C2A14; --bad:#FF8070; --bad-soft:#40201D;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#130F22; --surface:#1C1631; --surface2:#261E42; --ink:#F1ECFB; --muted:#A99FC7; --line:#352C58;
+  --accent:#A78BFA; --accent-ink:#130F22; --accent-soft:#2E2358; --mark:#C4B5FD; --mark-soft:#2B2150;
+  --good:#43CC9C; --good-soft:#123A30; --warn:#F2A455; --warn-soft:#3C2A14; --bad:#FF8070; --bad-soft:#40201D;
+  color-scheme:dark;
+}
