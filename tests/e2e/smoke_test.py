@@ -101,6 +101,7 @@ def run(p, url):
 
     # Portal: apply, then mark Offered and expect Placed
     page.click('a[data-tab="portal"]')
+    page.wait_for_selector("#pnotif", timeout=10000)  # the tab switches on a hashchange event, so wait for it
     check("portal: alerts panel lists notifications", page.locator("#pnotif .notif").count() > 0)
     check("portal: upcoming drives are listed", page.locator("#pupcoming .drow").count() > 0)
     unread = page.locator("#pnotif .notif.unread").count()
